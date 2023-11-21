@@ -1,9 +1,28 @@
 #include <stdio.h>
 
 int main(){
-    char ch= 128;
-    char dh= -132;
-    printf("%hhd %hhd\n", ch, dh);
-    printf("%d", sizeof(float));
+    int arr[]= {10,20,30,45,67,56,74};
+    int i= 4, *j, *k, *x, *y;
+    j= &i;
+    printf("j= %u\n", j);
+    j= j+9;
+    printf("j= %u\n", j);
+    k= &i;
+    printf("k= %u\n", k);
+    k= k-3;
+    printf("k= %u\n", k);
+    x= &arr[1];
+    y= &arr[5];
+    printf("x= %u\n", x);
+    printf("y= %u\n", y);
+    printf("%d\n", y-x);
+    j= &arr[4];
+    k= (arr + 4);
+    if (j==k){
+        printf("The two pointers point to the same location\n");
+    }
+    else{
+        printf("The two pointers point to different locations\n");
+    }
     return 0;
 }
