@@ -1,9 +1,18 @@
-#include<stdio.h>
+//Leet code problem 2942 //
+#include <stdio.h>
 
-int main(){
-    signed char ch1= 'A';
-    unsigned char ch2= 'A';
-    printf("%c= %d= %c\n", ch1, ch1, -65);
-    printf("%c= %d= %c", ch2, ch2, 65);
-    return 0;
+int* findWordsContaining(char** words, int wordsSize) {
+    for(int i=0; i< wordsSize; i++){
+        int j= 0;
+        while (words[i][j] != '\0'){
+            printf("%c", words[i][j]);
+            j++;
+        }
+    }
+}
+
+void main(){
+    char words[][6]= {"apple", "ball", "cat", "dog"};
+    int returnSize;
+    findWordsContaining(&words[0], 4);
 }
